@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Practicando</title>
+  </head>
+  <body>
+  <h1>Entrada y salida</h1>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+
+<main>
+
+<div class="padre">
+
+
+  <div class="c1">
+    <h2>Ejercicio 1</h2>
+    <p>
+      #include <stdio.h> <br>
+
+      int main(int argc, char const *argv[]) { <br>
+        int n; <br>
+        printf("Ingrese la cantidad de numeros\n"); <br>
+        scanf("%d", &n); <br>
+        int suma = 0; <br>
+        int num; <br>
+        for (int i = 1; i <= n; i++) { <br>
+          printf("Ingrese un numero\n"); <br>
+          scanf("%d", &num); <br>
+          suma += num; <br>
+        } <br>
+        printf("%d\n", suma); <br>
+        return 0; <br>
+      }
+    </p>
+  </div>
+
+  <div class="c2">
+    <h2>Ejercicio 2</h2>
+    <p>
+      #include <stdio.h> <br>
+      #include <stdbool.h> <br>
+
+      int main(int argc, char *argv[]) { <br>
+        int suma = 0; <br>
+        int num; <br>
+        while (true) { <br>
+          printf("Ingrese un numero\n"); <br>
+          scanf("%d", &num); <br>
+          suma += num; <br>
+          if (num == 0) { <br>
+            printf("%d\n", suma); <br>
+            return 0; <br>
+          } <br>
+        } <br>
+
+      } <br>
+
+    </p>
+
+  </div>
+
+<div class="c3">
+  <h2>Ejercicio 3</h2>
+    <p>
+      #include <stdio.h> <br>
+
+      int main(int argc, char const *argv[]) { <br>
+          int n; <br>
+          int m; <br>
+          int suma = 0; <br>
+          scanf("%d", &n); <br>
+          for (int i = 0; i < n; i++) { <br>
+              scanf("%d", &m); <br>
+              suma += m; <br>
+          } <br>
+          printf("%d",suma); <br>
+          return 0; <br>
+      } <br>
+    </p>
+  </div>
+
+
+</div>
+<div class="padre">
+
+
+<div class="c4">
+  <h2>Ejercicio 4</h2>
+    <p>
+
+      #include <stdio.h> <br>
+
+      int main(int argc, char const *argv[]) { <br>
+          int m; <br>
+          int suma = 0; <br>
+          while(scanf("%d", &m) != EOF) <br>
+           { <br>
+              suma += m; <br>
+          } <br>
+          printf("%d\n",suma); <br>
+          return 0; <br>
+      } <br>
+    </p>
+</div>
+
+<div class="c5">
+  <h2>Ejercicio 5</h2>
+    <p>
+      #include <stdio.h> <br>
+
+      int main(int argc, char *argv[]) { <br>
+        int c; <br>
+        int caracteres = 0; <br>
+        int lineas = 0; <br>
+        int palabras = 0; <br>
+        int in_word; <br>
+        while ((c = getchar()) != EOF) { <br>
+          if (c != '\n' && c != ' ') { <br>
+            caracteres++; <br>
+          } <br>
+          if(c != '\n' && c!= 't' && c != ' ') { <br>
+            in_word = 1; <br>
+          } else { <br>
+            if(in_word != 0) { <br>
+              palabras++; <br>
+            } <br>
+            in_word = 0; <br>
+          }   <br>
+          if (c == '\n')  { <br>
+            lineas++; <br>
+          } <br>
+        } <br>
+        printf("caracteres = %d\n lineas = %d\n palabras = %d\n", <br> caracteres,<br>
+        lineas, palabras); <br>
+        return 0; <br>
+      } <br>
+    </p>
+</div>
+
+<div class="c6">
+  <h2>Ejercicio 6</h2>
+  <p>
+    #include <stdio.h> <br>
+
+    int main(int argc, char const *argv[]) { <br>
+        int a; <br>
+        int b; <br>
+        int n; <br>
+        printf("Ingrese el minimo\n"); <br>
+        scanf("%d", &a); <br>
+        printf("Ingrese el maximo\n"); <br>
+        scanf("%d", &b); <br>
+        while(scanf("%d", &n) != EOF){ <br>
+            if(n > a && n < b) { <br>
+                printf("%d\n", n); <br>
+            } <br>
+        } <br>
+    return 0; <br>
+  } <br>
+  </p>
+</div>
+</div>
+
+<div class="padre">
+  <div class="c7">
+    <h2>Ejercicio 7</h2>
+    <p>
+      #include <stdio.h> <br>
+      #include <stdlib.h> <br>
+      #include <time.h> <br>
+
+
+      int main(int argc, char const *argv[]) { <br>
+          srand(time(NULL)); <br>
+          int a; <br>
+          int b; <br>
+          int n; <br>
+          printf("Ingrese el minimo\n"); <br>
+          scanf("%d", &a); <br>
+          printf("Ingrese el maximo\n"); <br>
+          scanf("%d", &b); <br>
+          printf("Ingrese la cantidad de numeros"); <br>
+          scanf("%d", &n); <br>
+          for(int i = 0; i < n; i++){ <br>
+              int num = (rand() % b) + 1; <br>
+              if(num < a){ <br>
+                  num = a; <br>
+              } <br>
+              printf("%d\n", num); <br>
+          } <br>
+      return 0; <br>
+    } <br>
+    </p>
+  </div>
+
+<div class="c8">
+  <h2>Ejercicio 8</h2>
+  <p>
+    #include <stdio.h> <br>
+    #include <stdlib.h> <br>
+    #include <time.h> <br>
+
+    int main(int argc, char const *argv[]) { <br>
+    srand <br>
+    return 0; <br>
+  } <br>
+<br>
+                      //En proceso//
+
+  </p>
+</div>
+
+</div>
+
+<hr>
+
+<p></p>
+
+</main>
+
+
+
+<footer>
+
+</footer>
+
+
+
+
+
+
+<script src="main.js" charset="utf-8"></script>
+  </body>
+</html>
